@@ -9,11 +9,13 @@ library("einsum")
 library("DelayedTensor")
 library("reticulate")
 library("testthat")
+library("HDF5Array")
 
 # Setting
 options(testthat.use_colours = FALSE)
 options(delayedtensor.sparse = FALSE)
 options(delayedtensor.verbose = FALSE)
+setHDF5DumpCompressionLevel(level=9L)
 source("testthat/test_Einsum_objects.R")
 
 # source("../R/Decomp.R") # comment out
