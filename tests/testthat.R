@@ -15,7 +15,8 @@ library("HDF5Array")
 options(testthat.use_colours = FALSE)
 options(delayedtensor.sparse = FALSE)
 options(delayedtensor.verbose = FALSE)
-setHDF5DumpCompressionLevel(level=9L)
+setHDF5DumpChunkLength(length = 1000000L)
+setHDF5DumpCompressionLevel(level = 9L)
 source("testthat/test_Einsum_objects.R")
 
 # source("../R/Decomp.R") # comment out
